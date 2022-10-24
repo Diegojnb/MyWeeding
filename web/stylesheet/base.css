@@ -1,0 +1,206 @@
+:root {
+    --websiteHeaderHeight: 100px;
+}
+
+body{
+    margin: 0 0 0 0;
+    overflow: auto;
+    background-color: #06161D;
+}
+
+#navigation-bar{
+    max-width: 100%;    
+    display: grid;
+    align-items: center;
+    height: var(--websiteHeaderHeight);
+    padding: 0px 15%;
+    background-color: #F3F3F3;
+    font-size: 35px;
+    font-weight: 400;
+    font-family: Lora;
+    font-style: normal;
+    line-height: 1.2;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 10;
+}
+
+#cabecera {    
+    top: var(--websiteHeaderHeight);
+    max-width: 180px;
+    min-width: 100%;
+    min-height: 55px;
+    height: 120px;
+    background-image: url("../images/floresTop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #06161D;
+    position: fixed;
+}
+
+.principal {
+    z-index: 0;
+    max-width: 100%;
+    display: grid;    
+    grid-template-columns: 1fr 1fr;
+    gap: 68px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: absolute;
+    margin-top: var(--websiteHeaderHeight);
+    height: calc(100% - var(--websiteHeaderHeight));    
+}
+
+.principal-left{
+    box-sizing: border-box;
+    padding-left: 30%;
+    max-height: 28%;
+    grid-row: auto;
+}
+
+.principal-right{
+    padding-top: calc(var(--websiteHeaderHeight) + 120px);
+    box-sizing: border-box;
+    background-image: url("../images/fotoPrincipal.jpg");
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-row: auto;
+}
+
+#pannel-text{
+    justify-content: flex-start;
+    color: #fff;
+}
+
+.main-letters{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    margin: 0;
+}
+
+.principal-letters{
+    height: 0;
+    font-weight: 200;
+    overflow-wrap: anywhere;
+    font-size: 68.8px;
+    font-family: Lora;
+    line-height: 1.2;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0;
+    display: block;
+    margin: 0;
+    color: #fff;
+}
+
+.separator{
+    margin: 10px 10px;
+    border: 1px solid;
+    width: 10%;    
+    box-sizing: content-box;
+    height: 0;
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: auto;
+    overflow: hidden;
+    font-weight: 300;
+    color: #fff;
+    font-family: ProximaNova,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    
+}
+
+#lista{
+    list-style-type: none;
+    text-align: justify;
+    font-family: Lora;
+    overflow-wrap: anywhere;
+    padding: 0;
+}
+
+.texto-destacado{
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.texto-informacion{
+    font-weight: 400;
+    font-size: 44px;
+    font-family: Lora;
+    line-height: 1.2;
+    margin: 0;
+}
+
+
+
+.texto-descripcion{
+    font-weight: 400;
+    font-size: 18px;
+    font-family: Lora;
+    line-height: 1.2;
+}
+
+#pie { 
+    position: absolute;
+    background-image: url("../images/floresBot.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #06161D;
+    bottom: 0;
+    left: 76%;
+    max-width: 180px;
+    min-width: 100%;
+    min-height: 55px;
+    height: 120px;
+}
+
+@media only screen and (max-device-width: 768px) {
+    .principal {
+         z-index: 0;
+         max-width: 100%;
+         display: grid;    
+         grid-template-columns: 1fr 1fr;
+         gap: 68px;
+         margin: 0 auto;
+         padding: 0 20px;
+         position: absolute;
+         margin-top: var(--websiteHeaderHeight);
+         height: calc(100% - var(--websiteHeaderHeight));    
+     }
+     
+     .principal-left{
+         box-sizing: border-box;
+         padding-left: 30%;
+         max-height: 28%;
+         grid-row: 1;
+         grid-column: 1;
+     }
+     
+     .principal-right{
+         padding-top: calc(var(--websiteHeaderHeight) + 120px);
+         box-sizing: border-box;
+         background-image: url("../images/fotoPrincipal.jpg");
+         display: block;
+         background-repeat: no-repeat;
+         background-size: contain;
+         grid-row: 2;
+         grid-column: 1;
+     }
+ }
