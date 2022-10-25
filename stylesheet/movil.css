@@ -82,4 +82,10 @@
     #parrafoboda{
         word-break: break-all;
     }
+
+    #myCarousel{
+        left:300px;
+        width: 600px;
+        height: 900px;
+    }
 }
