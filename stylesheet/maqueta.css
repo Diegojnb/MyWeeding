@@ -29,13 +29,15 @@ body{
 
 #navigation-letters{
     width: 40%;
-    color: #783937FF;
+    color: #e8a3a0;
     text-align: left;
     padding-top: 2%;
 }
 
 #nav-list{
-    padding-left: 150px;
+    padding-left: 700px;
+    font-size: medium;    
+    padding-top: 25px;
 }
 
 a{
@@ -64,7 +66,8 @@ li {
     position: relative;
     word-break: break-word;
     text-transform: uppercase;
-    font-size: medium;
+    font-size: 22px;
+    padding-right: 50px;
 }
 
 #link-list{
@@ -81,6 +84,7 @@ li {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
+
 #principal{
     top:var(--websiteHeaderHeight);
     position: absolute;
@@ -93,8 +97,6 @@ li {
 #principal-left{
     width: 50%;
     display: grid;
-    grid-row: 1;
-    grid-column: 1;
     
 }
 
@@ -104,6 +106,7 @@ li {
     grid-row: 1;
     grid-column: 2;
     width: 700px;
+    /*height: 1000px;*/
     bottom: var(--websiteFotterHeight);
 }
 
@@ -114,13 +117,23 @@ li {
     padding: 5%;
 }   
 
+#pannel-text-header{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#descripcionboda{
+    grid-row: 2;
+    grid-column: 1;
+}
+
 #main-letters{    
     align-items: center;
     position: relative;
     z-index: 2;
     height: 20%;
     margin: 0;
-    height: 100px;
+    
     text-align: left;
     color: #783937FF;
 }
