@@ -83,6 +83,7 @@
     }
     .texto-descripcion p {
         font-size: 70px;        
+        font-weight: 550;
     }
     #parrafoboda{
         word-break: break-all;
