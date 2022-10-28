@@ -114,13 +114,12 @@
 
     #exCollapsingNavbar{
         width: 70%;
-        height: 100%;
+        height: 1500px;
         right: 0;
         opacity: 1;    
         position: fixed;
         z-index: 500;
         background-color: #e8a3a0;
-        box-shadow: inset 0 -1px 0 rgb(0 0 0 / 10%);
     }
 
     .link-list-collapse{
@@ -136,5 +135,42 @@
     }
     .li-collapse{
         padding-top: 200px;
+    }
+}
+
+@media only screen and ((max-device-height: 768px)) {
+
+    #navigation-bar{
+        height: 200px;
+    }
+
+    #navigation-letters{
+        font-size: 110.2px;
+        padding-top: 3%;
+    }
+
+    #core-button{        
+        margin-top: 0%;
+    }
+
+    #exCollapsingNavbar{
+        width: 70%;
+        height: 100%;
+        position: fixed;
+        z-index: 500;
+        
+    }
+
+    .link-list-collapse{
+        white-space: inherit;
+        font-weight: 700;
+        font-size: 100px;
+    }
+
+    .links-top{
+        padding-top: 0px;
+    }
+    .li-collapse{
+        padding-top: 50px;
     }
 }

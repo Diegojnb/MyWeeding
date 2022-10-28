@@ -238,3 +238,17 @@ li {
 .carousel-indicators{
     z-index: 2;
 }
+
+#location-left{
+    width: 100%;
+    padding: 5%;
+    padding-top: 15%;
+    grid-area: box;   
+}
+
+#llevame-button{
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    font-weight: 800px;
+}
