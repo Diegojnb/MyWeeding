@@ -1,20 +1,20 @@
-:root {
-    --websiteHeaderHeight: 100px;
+:root{
+    --websiteHeaderHeight:10%;
 }
 
 body{
     margin: 0 0 0 0;
-    overflow: auto;
-    background-color: #06161D;
+    font-family: ProximaNova,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background-image: url("../images/fondo1.webp");
 }
 
 #navigation-bar{
-    max-width: 100%;    
-    display: grid;
-    align-items: center;
+    background-color: #e8a3a0;
+    max-width: 100%;
     height: var(--websiteHeaderHeight);
-    padding: 0px 15%;
-    background-color: #F3F3F3;
+    padding: 0px 10%;
     font-size: 35px;
     font-weight: 400;
     font-family: Lora;
@@ -24,63 +24,129 @@ body{
     display: flex;
     width: 100%;
     z-index: 10;
+    color: #783937FF;
 }
 
-#cabecera {    
-    top: var(--websiteHeaderHeight);
-    max-width: 180px;
-    min-width: 100%;
-    min-height: 55px;
-    height: 120px;
-    background-image: url("../images/floresTop.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #06161D;
-    position: fixed;
+#navigation-letters{
+    width: 40%;
+    color: #e8a3a0;
+    text-align: left;
+    padding-top: 2%;
+    font-family: Lato;
 }
 
-.principal {
-    z-index: 0;
-    max-width: 100%;
-    display: grid;    
-    grid-template-columns: 1fr 1fr;
-    gap: 68px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: absolute;
-    margin-top: var(--websiteHeaderHeight);
-    height: calc(100% - var(--websiteHeaderHeight));    
+#nav-list{
+    visibility: visible;
+    padding-left: 700px;
+    font-size: medium;    
+    padding-top: 25px;
 }
 
-.principal-left{
-    box-sizing: border-box;
-    padding-left: 30%;
-    max-height: 28%;
-    grid-row: auto;
+a{
+    text-decoration: none;
+    color: #783937FF;
 }
 
-.principal-right{
-    padding-top: calc(var(--websiteHeaderHeight) + 120px);
-    box-sizing: border-box;
-    background-image: url("../images/fotoPrincipal.jpg");
+ul {
+    white-space:nowrap;
+    list-style-type: none;    
+    display: list-item;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
     display: block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    grid-row: auto;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
+
+li {
+    display: inline-block;
+    position: relative;
+    word-break: break-word;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding-right: 50px;
+}
+
+#link-list{
+    display: list-item;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 10px;
+}
+
+#principal{
+    width: 100%;
+    top:var(--websiteHeaderHeight);
+    position: absolute;
+    display: grid;
+    height: calc(100% - var(--websiteHeaderHeight));
+    bottom: var(--websiteFotterHeight);
+    color: #783937FF;
+    grid-template: 'header foto' 
+                   'box foto';
+}
+
+#principal-right{
+    padding-top: 40px;
+    padding-right: 200px;
+    min-width: 100%;
+    grid-area: foto;
+    bottom: var(--websiteFotterHeight);
+}
+
 
 #pannel-text{
     justify-content: flex-start;
-    color: #fff;
+    color: #783937FF;
+    padding: 4%;
+    
+}   
+
+#pannel-text-header{
+    width: 100%;
+    padding: 5%;
+    padding-top: 3%;
+    grid-area: header;
+    
 }
 
-.main-letters{
-    display: flex;
+#descripcionboda{
+    
+    width: 100%;
+    padding: 5%;
+    height: 500px;
+    grid-area: box;
+    padding-right: 0;
+}
+
+#main-letters{    
     align-items: center;
     position: relative;
     z-index: 2;
-    height: 100%;
+    height: 40%;
     margin: 0;
+    
+    text-align: left;
+    color: #783937FF;
+}
+
+#secondary-letters{    
+    align-items: left;
+    position: relative;
+    text-align: left;
 }
 
 .principal-letters{
@@ -90,12 +156,11 @@ body{
     font-size: 68.8px;
     font-family: Lora;
     line-height: 1.2;
-    width: 100%;
     text-transform: uppercase;
     margin: 0;
     display: block;
     margin: 0;
-    color: #fff;
+    color: #783937FF;
 }
 
 .separator{
@@ -112,7 +177,7 @@ body{
     margin-inline-end: auto;
     overflow: hidden;
     font-weight: 300;
-    color: #fff;
+    color: #783937FF;
     font-family: ProximaNova,Helvetica,Arial,sans-serif;
     font-style: normal;
     
@@ -146,6 +211,7 @@ body{
     font-family: Lora;
     line-height: 1.2;
     margin: 0;
+    color: #783937FF;
 }
 
 
@@ -155,52 +221,41 @@ body{
     font-size: 18px;
     font-family: Lora;
     line-height: 1.2;
+    color: #783937FF;
 }
 
-#pie { 
-    position: absolute;
-    background-image: url("../images/floresBot.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #06161D;
-    bottom: 0;
-    left: 76%;
-    max-width: 180px;
-    min-width: 100%;
-    min-height: 55px;
-    height: 120px;
+.texto-descripcion p {
+    white-space:normal;
+    word-wrap:break-word;
+    text-transform: none;  
+    font-weight: 100;
+    font-size: 20px;
 }
 
-@media only screen and (max-device-width: 768px) {
-    .principal {
-         z-index: 0;
-         max-width: 100%;
-         display: grid;    
-         grid-template-columns: 1fr 1fr;
-         gap: 68px;
-         margin: 0 auto;
-         padding: 0 20px;
-         position: absolute;
-         margin-top: var(--websiteHeaderHeight);
-         height: calc(100% - var(--websiteHeaderHeight));    
-     }
-     
-     .principal-left{
-         box-sizing: border-box;
-         padding-left: 30%;
-         max-height: 28%;
-         grid-row: 1;
-         grid-column: 1;
-     }
-     
-     .principal-right{
-         padding-top: calc(var(--websiteHeaderHeight) + 120px);
-         box-sizing: border-box;
-         background-image: url("../images/fotoPrincipal.jpg");
-         display: block;
-         background-repeat: no-repeat;
-         background-size: contain;
-         grid-row: 2;
-         grid-column: 1;
-     }
- }
+#core-button{
+    visibility: hidden;
+}
+
+.carousel-indicators{
+    z-index: 2;
+}
+
+#location-left{
+    width: 100%;
+    padding: 5%;
+    padding-top: 15%;
+    grid-area: box;   
+}
+
+#llevame-button{
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    font-weight: 800px;
+}
+
+#texto-location{
+    width: 100%;
+    padding: 5%;
+    padding-top: 15%;   
+}
