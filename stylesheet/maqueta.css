@@ -235,3 +235,6 @@ li {
     visibility: hidden;
 }
 
+.carousel-indicators{
+    z-index: 2;
+}

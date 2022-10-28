@@ -49,7 +49,7 @@
     }
 
     .texto-descripcion{
-        font-weight: 400;
+        font-weight: 800;
         font-size: 70px;
         word-break: break-word;
     }
@@ -82,7 +82,7 @@
         width: 100%;
     }
     .texto-descripcion p {
-        font-size: 70px;
+        font-size: 70px;        
     }
     #parrafoboda{
         word-break: break-all;
