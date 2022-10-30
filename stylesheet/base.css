@@ -222,6 +222,7 @@ li {
     font-family: Lora;
     line-height: 1.2;
     color: #783937FF;
+    text-align: justify;
 }
 
 .texto-descripcion p {
