@@ -299,13 +299,14 @@ li {
     grid-area: footer;
     text-align: center;
     font-size: 30px;
+    height: 400px;
 }
 
 .rrss{
     padding: 5%;
     padding-left: 15%;
     align-items: center;
-    height: 600px;
+    height: 750px;
 }
 
 .foto-rrss{
@@ -321,4 +322,13 @@ li {
     font-size: 40px; 
     padding-left:120px;
     padding-right:20px;
+}
+
+.boton-github   {
+    background-image: url('../images/logoGithub.png');
+    background-size: 10%;
+    background-repeat: no-repeat;    
+    font-size: 40px; 
+    padding-left:120px;
+    padding-right:20px;    
 }
