@@ -20,3 +20,4 @@ function myNavFunc(){
         window.open("https://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=" + dest);
     }
 }
+

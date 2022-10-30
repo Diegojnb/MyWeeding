@@ -85,7 +85,7 @@
     }
     .texto-descripcion p {
         font-size: 70px;        
-        font-weight: 400;
+        font-weight: 600;
     }
     #parrafoboda{
         word-break: break-all;
@@ -152,6 +152,52 @@
         background-size: 25%;
         background-position: 5px;
     }
+
+    #principal-rrss{
+        width: 100%;
+        top:var(--websiteHeaderHeight);
+        position: absolute;
+        display: grid;
+        grid-template: 'header' 
+                       'rrssSandra'
+                       'rrssDiego'
+                       'footer';
+    }
+
+    #rrss-header h1{
+        font-size: 80px;
+    }
+    #rrss-header h4{
+        font-size: 60px;
+    }
+    .boton-rrss{
+        font-size: 70px; 
+        padding-left:20px;
+        padding-right:20px;
+    }
+    
+    .boton-instagram{
+        font-size: 60px; 
+        width: 100%;
+        padding-left:50px;
+        padding-right:10px;
+    }
+
+    #rrss-footer{
+        font-size: 50px;
+    }
+    
+    .rrss{
+        padding: 5%;
+        padding-left: 10%;
+        align-items: center;
+        height: 90%;
+    }
+    
+    .foto-rrss{
+        height: 700px;
+        padding-left: 10%;
+    }
 }
 
 @media only screen and ((max-device-height: 768px)) {
@@ -196,5 +242,9 @@
     .li-collapse{
         padding-top: 25px;
         
+    }
+
+    #principal-rrss{
+        padding-top: 80px;
     }
 }

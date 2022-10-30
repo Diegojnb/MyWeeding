@@ -99,6 +99,7 @@ li {
                    'box foto';
 }
 
+
 #principal-right{
     padding-top: 40px;
     padding-right: 200px;
@@ -263,4 +264,61 @@ li {
     width: 100%;
     padding: 5%;
     padding-top: 15%;   
+}
+
+#principal-rrss{
+    width: 100%;
+    top:var(--websiteHeaderHeight);
+    position: absolute;
+    display: grid;
+    height: calc(100% - var(--websiteHeaderHeight));
+    bottom: var(--websiteFotterHeight);
+    color: #783937FF;
+    grid-template: 'header header' 
+                   'rrssSandra rrssDiego'
+                   'footer footer';
+}
+
+#rrss-header{
+    text-align: center;
+    font-size: 30px;
+    grid-area: header;
+}
+
+.boton-rrss{
+    background-image: url('../images/logoWhatsapp.png');
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 5px;
+    font-size: 40px; 
+    padding-left:120px;
+    padding-right:20px;
+}
+
+#rrss-footer{
+    grid-area: footer;
+    text-align: center;
+    font-size: 30px;
+}
+
+.rrss{
+    padding: 5%;
+    padding-left: 15%;
+    align-items: center;
+    height: 600px;
+}
+
+.foto-rrss{
+    height: 400px;
+    padding-left: 20%;
+}
+
+.boton-instagram{
+    background-image: url('../images/logoInstagram.png');
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 5px;
+    font-size: 40px; 
+    padding-left:120px;
+    padding-right:20px;
 }
