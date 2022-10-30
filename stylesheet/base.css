@@ -255,6 +255,7 @@ li {
     background-image: url('../images/googleMapsIcono.jpg');
     background-size: 20%;
     background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 #texto-location{

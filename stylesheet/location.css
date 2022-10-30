@@ -147,9 +147,10 @@
     #llevame-button{
         width: 500px;
         height: 200px;
-        font-size: 40px;
-        font-weight: 800px;
+        font-size: 50px;
+        font-weight: 900px;
         background-size: 25%;
+        background-position: 5px;
     }
 }
 
