@@ -193,6 +193,8 @@
 
     #rrss-footer{
         font-size: 50px;
+        text-align: justify;
+        padding: 5%;
     }
     
     .rrss{
