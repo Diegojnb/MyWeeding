@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="./stylesheet/movil.css">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="./code/code.js"></script>
 </head>
 
@@ -19,10 +20,10 @@
         <div id="navigation-letters">S&D</div>
         <nav id="nav-list">            
             <ul class="link-list">
-                <li class="items-list-top"><a class="links-top" href="index.html">¡Bienvenidos!</a></li>
-                <li class="items-list-top"><a class="links-top" href="schedule.html">Planning</a></li>
-                <li class="items-list-top"><a class="links-top" href="location.html">¿Cómo llego?</a></li>
-                <li class="items-list-top"><a class="links-top" href="contact.html">Contáctanos</a></li>
+                <li class="items-list-top"><a id="index" class="links-top">¡Bienvenidos!</a></li>
+                <li class="items-list-top"><a id="schedule" class="links-top" >Planning</a></li>
+                <li class="items-list-top"><a id="location" class="links-top">¿Cómo llego?</a></li>
+                <li class="items-list-top"><a id="contact" class="links-top">Contáctanos</a></li>
             </ul>
         </nav>
         <button type="button" id="core-button" class="btn btn-default" data-toggle="collapse" data-target="#exCollapsingNavbar">&#9776;</button>
@@ -31,10 +32,10 @@
               <span>
                 <h3>
                     <ul class="link-list-collapse">
-                        <li class="li-collapse"><a class="links-top" href="index.html">¡Bienvenidos!</a></li>
-                        <li class="li-collapse"><a class="links-top" href="schedule.html">Planning</a></li>
-                        <li class="li-collapse"><a class="links-top" href="location.html">¿Cómo llego?</a></li>
-                        <li class="li-collapse"><a class="links-top" href="contact.html">Contáctanos</a></li>
+                        <li class="li-collapse"><a id="index" class="links-top">¡Bienvenidos!</a></li>
+                        <li class="li-collapse"><a id="schedule" class="links-top">Planning</a></li>
+                        <li class="li-collapse"><a id="location"  class="links-top">¿Cómo llego?</a></li>
+                        <li class="li-collapse"><a id="contact" class="links-top">Contáctanos</a></li>
                     </ul>
                 </h3>                
             </div>
@@ -42,87 +43,7 @@
     </div>
     <div id="welcome">
         <div id="principal">
-            <div id="pannel-text-header">
-                <div id="main-letters">
-                    <h1 class="principal-letters">
-                        Sandra &amp; Diego
-                    </h1>
-                </div>
-                <div id="secondary-letters">
-                    <hr class="separator">
-                <p class="texto-destacado">
-                    ¡Nos casamos!
-                </p>
-                <p class="texto-informacion">
-                    <span>10</span> Junio 2023
-                </p>
-                <p class="texto-destacado">
-                    Aldea Santillana, Madrid
-                </p>
-                <hr class="separator">
-                </div>
-                
-            </div>
-            <div id="descripcionboda">
-                <ul id="lista">
-                    <li>
-                        <div id="parrafoboda">
-                            <div class="texto-informacion">
-                                ¡Bienvenidos a nuestra boda!
-                            </div>
-                            <div class="texto-descripcion">
-                                <p>¡Que sí! Que nos casamos!!!</p>
-                                <p>¡Estamos super felices! Nos sentimos en las nubes y queremos
-                                    compartir contigo todo nuestro amor. Por eso estamos preparando
-                                    una boda que hará historia y en la que te lo pasarás genial.</p>
-                                <p>Mientras llega el gran día hemos creado esta web con un montón de
-                                    secciones para que estés al día de todo y para compartir nuestra
-                                    historia de amor.</p>
-                                <p>Una cosa importante, en la sección asistencia puedes confirmar si
-                                    vas a la boda o no. Confírmanos lo antes posible por favor, que
-                                    así organizarlo todo nos será muchos más fácil.</p>
-                                <p>Disfruta la web y nos vemos muy pronto, mil besos!</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="principal-right">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#myCarousel" data-slide-to="1"></li>
-                      <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-                  
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="./images/test1.png">
-                      </div>
-                  
-                      <div class="item">
-                        <img src="./images/test2.png">
-                      </div>
-                  
-                      <div class="item">
-                        <img src="./images/test3.png">
-                      </div>
-                    </div>
-                  
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-            </div>
+            
         </div>
     </div>
 </body>
