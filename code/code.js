@@ -24,6 +24,18 @@ $(document).ready(function(){
     $("#contact").click(function(){
 		$("#principal").load("contact.html");
 	});
+    $("#index-phone").click(function(){
+		$("#principal").load("main.html");
+	});
+	$("#schedule-phone").click(function(){
+		$("#principal").load("schedule.html");
+	});
+    $("#location-phone").click(function(){
+		$("#principal").load("location.html");
+	});
+    $("#contact-phone").click(function(){
+		$("#principal").load("contact.html");
+	});
 });
 
 function myNavFunc(){
