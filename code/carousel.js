@@ -1,6 +1,7 @@
 var numPhotos=78;
-var activeElement = 0;
 var listPhotos = [];
+var timeout = 6000;
+var margin = 200;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -25,60 +26,46 @@ function customSplice(index){
     var x = listPhotos.slice(0,index);
     var y = listPhotos.slice(index+1);
     return x.concat(y);
-}    
-
-function changePhotosPrev(){
-    activeElement-=1;
-    if(activeElement<0){
-        activeElement=0;
-    }
-    activeElement=activeElement%3;
-    changePhotos();
-}
-
-function changePhotosNext(){
-    activeElement+=1;
-    activeElement=activeElement%3;
-    changePhotos();
-}
+} 
 
 
 function changePhotos(){
-    console.log(activeElement);
     var randomNumber = generateRandomNumber();
     listPhotos = customSplice(randomNumber);
     var srcPhoto = "./images/carrousel/" + zeroPad(randomNumber+1) + ".jpg";
     var basehtml = "<img src=\"" + srcPhoto + "\">";
-    /*var newImg = new Image;
-    newImg.onload = function() {
-        document.getElementById('myCarousel').style.setProperty('width', this.width+"px");
-        document.getElementById('myCarousel').style.setProperty('height', this.height+"px");
-    }
-    newImg.src = srcPhoto;
-    */
-    if(document.getElementById('carr' + activeElement)==null){
+    
+    if(document.getElementById('carr0')==null){
         return;
     }
-    document.getElementById('carr' + activeElement).innerHTML = basehtml;
+    document.getElementById('carr0').innerHTML = basehtml;        
     
+    const img = new Image();
+    img.onload = function() {
+        console.log(this.height);
+        console.log(this.width);
+        if(this.height + margin > 1800){
+            document.getElementById('principal-right').style.height = 1600;    
+        }else{
+            document.getElementById('principal-right').style.height = this.height + margin;
+        }
+        
+    }
+    img.src = srcPhoto;
+
     if(listPhotos.length==0){
         initializeList();
     }
-    activeElement+=1;
-    activeElement=activeElement%3;           
 }
 
-$(document).ready(function(){
+jQuery(document).ready(function() {
 
 
     async function demo() {
         initializeList();
-        const carousel = new bootstrap.Carousel('#myCarousel');
-        carousel.carousel();
-
-        while (true) {                
-            await sleep(6000);
-            changePhotos();            
+        while (true) {             
+            changePhotos();
+            await sleep(timeout);
         }
     }
     

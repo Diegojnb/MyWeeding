@@ -193,6 +193,38 @@
         height: 700px;
         padding-left: 20%;
     }
+
+    .link-list-collapse{
+        white-space: inherit;
+        font-weight: 400;
+        padding-top: 150px;
+    }
+    
+    .links-top{
+        font-weight: 700;
+        font-size: 60px;
+    }
+    .li-collapse{
+        padding-top: 100px;
+    }
+    
+    #location-left{        
+        padding-left: 20%;
+        padding-top: 2%;  
+    }
+    
+    #texto-location{
+        padding-top: 2%;   
+    }
+    
+    #llevame-button{
+        width: 500px;
+        height: 200px;
+        font-size: 50px;
+        font-weight: 900px;
+        background-size: 25%;
+        background-position: 5px;
+    }
 }
 
 @media only screen and ((max-device-height: 768px)) {
