@@ -136,6 +136,63 @@
     .li-collapse{
         padding-top: 200px;
     }
+
+    #principal-rrss{
+        width: 100%;
+        top:var(--websiteHeaderHeight);
+        position: absolute;
+        display: grid;
+        grid-template: 'header' 
+                       'rrssSandra'
+                       'rrssDiego'
+                       'footer';
+    }
+
+    #rrss-header h1{
+        font-size: 80px;
+    }
+    #rrss-header h4{
+        font-size: 60px;
+    }
+    .boton-rrss{
+        font-size: 70px; 
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .boton-instagram{
+        font-size: 60px; 
+        width: 100%;
+        padding-left:50px;
+        padding-right:10px;
+    }
+
+    .boton-github{
+        background-size: 15%;
+        font-size: 60px; 
+        width: 60%;        
+        padding-left:50px;
+        padding-right:10px;
+        background-position: 5px;
+    }
+
+    #rrss-footer{
+        font-size: 50px;
+        text-align: justify;
+        padding: 5%;
+    }
+
+    .rrss{
+        padding: 5%;
+        padding-left: 10%;
+        align-items: center;
+        height: 90%;
+    }
+
+    .foto-rrss{
+        height: 700px;
+        padding-left: 20%;
+    }
 }
 
 @media only screen and ((max-device-height: 768px)) {
@@ -172,5 +229,9 @@
     }
     .li-collapse{
         padding-top: 50px;
+    }
+
+    #principal-rrss{
+        padding-top: 80px;
     }
 }
