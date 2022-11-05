@@ -1,7 +1,7 @@
 import os
 
 # folder path
-dir_path = '.\\images\\carrousel'
+dir_path = '..\\images\\carrousel'
 
 # list to store files
 secuencial = 1

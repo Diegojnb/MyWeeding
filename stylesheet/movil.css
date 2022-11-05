@@ -1,7 +1,7 @@
 @media only screen and ((max-device-width: 768px) or (max-device-height: 768px)) {
 
     #navigation-bar{
-        height: 280px;
+        height: 10%;
     }
 
     #nav-list{
@@ -141,7 +141,7 @@
 @media only screen and ((max-device-height: 768px)) {
 
     #navigation-bar{
-        height: 200px;
+        height: 7%;
     }
 
     #navigation-letters{
