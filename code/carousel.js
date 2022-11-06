@@ -1,6 +1,6 @@
 var numPhotos=78;
 var listPhotos = [];
-var timeout = 6000;
+var timeout = 10000;
 var margin = 200;
 
 function sleep(ms) {
@@ -30,28 +30,17 @@ function customSplice(index){
 
 
 function changePhotos(){
-    var randomNumber = generateRandomNumber();
-    listPhotos = customSplice(randomNumber);
-    var srcPhoto = "./images/carrousel/" + zeroPad(randomNumber+1) + ".jpg";
+    var index = generateRandomNumber();
+    var el = listPhotos[index];
+        
+    listPhotos = customSplice(index);
+    var srcPhoto = "./images/carrousel/" + el + ".jpg";
     var basehtml = "<img src=\"" + srcPhoto + "\">";
     
     if(document.getElementById('carr0')==null){
         return;
     }
     document.getElementById('carr0').innerHTML = basehtml;        
-    
-    const img = new Image();
-    img.onload = function() {
-        console.log(this.height);
-        console.log(this.width);
-        if(this.height + margin > 1800){
-            document.getElementById('principal-right').style.height = 1600;    
-        }else{
-            document.getElementById('principal-right').style.height = this.height + margin;
-        }
-        
-    }
-    img.src = srcPhoto;
 
     if(listPhotos.length==0){
         initializeList();
@@ -61,7 +50,7 @@ function changePhotos(){
 jQuery(document).ready(function() {
 
 
-    async function demo() {
+    async function carousel() {
         initializeList();
         while (true) {             
             changePhotos();
@@ -69,6 +58,6 @@ jQuery(document).ready(function() {
         }
     }
     
-    demo();
+    carousel();
 
 });

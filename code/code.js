@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
     $("#core-button").click(function(){
         if($(this).html()=="☰"){
-            $(this).html('&#10005');    
+            $(this).html('&#10005');
         }else{
             $(this).html('&#9776');
         }
@@ -12,30 +12,35 @@ jQuery(document).ready(function() {
 
 $(document).ready(function(){
     $("#principal").load("main.html");
-	$("#index").click(function(){
+    
+	$("#index").click(function(){	
 		$("#principal").load("main.html");
 	});
 	$("#schedule").click(function(){
 		$("#principal").load("schedule.html");
 	});
     $("#location").click(function(){
-		$("#principal").load("location.html");
+		$("#principal").load("location.html");        
 	});
     $("#contact").click(function(){
-		$("#principal").load("contact.html");
+		$("#principal").load("contact.html");        
 	});
     $("#index-phone").click(function(){
+        fixMain();
 		$("#principal").load("main.html");
 	});
 	$("#schedule-phone").click(function(){
-		$("#principal").load("schedule.html");
+        fixSchedule();
+		$("#principal").load("schedule.html");        
 	});
     $("#location-phone").click(function(){
-		$("#principal").load("location.html");
+        fixSchedule();
+		$("#principal").load("location.html");        
 	});
     $("#contact-phone").click(function(){
-		$("#principal").load("contact.html");
-	});
+        fixSchedule();
+		$("#principal").load("contact.html");        
+	}); 
 });
 
 function myNavFunc(){
@@ -48,4 +53,31 @@ function myNavFunc(){
     }else{
         window.open("https://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=" + dest);
     }
+}
+
+function fixMain(){
+    fix("130px","80px","1500px","200px","15%","3%","700","80");
+}
+
+function fixSchedule(){
+    fix("90px","55px","1050px","110px","-13%","0%","600","60");
+}
+
+function fix(a,b,c,d,e,f,g,h){
+    document.getElementById('navigation-letters').style.fontSize = a;
+    var elements = document.getElementsByClassName('links-top');
+    for (let index = 0; index < elements.length; index++) {
+        const element = elements[index];
+        element.style.fontSize = b;
+    }
+    document.getElementById('exCollapsingNavbar').style.height = c;
+    var elements = document.getElementsByClassName('li-collapse');
+    for (let index = 0; index < elements.length; index++) {
+        const element = elements[index];
+        element.style.paddingTop = d;
+    }
+    document.getElementById('core-button').style.marginLeft = e;
+    document.getElementById('core-button').style.marginTop = f;
+    document.getElementById('core-button').style.fontWeight = g;
+    document.getElementById('core-button').style.fontSize = h;
 }

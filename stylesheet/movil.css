@@ -2,6 +2,7 @@
 
     #navigation-bar{
         height: 10%;
+        width: 1500px;
     }
 
     #nav-list{
@@ -10,18 +11,19 @@
         width: 0px;
     }
     #navigation-letters{
+        width: 300px;
+        height: 300px;
         font-size: 130.2px;
         font-weight: 700;
+        color: #783937FF;
+        text-align: left;
+        padding-top: 5%;
     }
-    
+
     #principal{
         grid-template: 'header' 
                        'foto'
                        'box';
-    }
-
-    #principal{
-        width: 600px;
     }
 
     #pannel-text-header{
@@ -68,13 +70,6 @@
         top: 0px;
     }
 
-    #navigation-letters{
-        width: 40%;
-        color: #783937FF;
-        text-align: left;
-        padding-top: 5%;
-    }
-
     #descripcionboda{
         padding-right: 0px;
         width: 1440px;
@@ -93,9 +88,8 @@
     }
 
     #myCarousel{
-        left:0px;
-        width: 1300px;
-        height: 1600px;
+        background-size: cover;
+        background-position: center;
     }
 
     #core-button{
@@ -130,9 +124,9 @@
 
     .links-top{
         font-weight: 700;
-        font-size: 80px;
-        padding-top: 200px;
+        font-size: 80px;    
     }
+    
     .li-collapse{
         padding-top: 200px;
     }
@@ -186,7 +180,7 @@
         padding: 5%;
         padding-left: 10%;
         align-items: center;
-        height: 90%;
+        height: 70%;
     }
 
     .foto-rrss{
@@ -194,27 +188,16 @@
         padding-left: 20%;
     }
 
-    .link-list-collapse{
-        white-space: inherit;
-        font-weight: 400;
-        padding-top: 150px;
-    }
     
-    .links-top{
-        font-weight: 700;
-        font-size: 60px;
-    }
-    .li-collapse{
-        padding-top: 100px;
-    }
     
     #location-left{        
         padding-left: 20%;
-        padding-top: 2%;  
+        padding-top: 2%;          
     }
     
     #texto-location{
-        padding-top: 2%;   
+        padding-top: 2%; 
+        width: 1000px;  
     }
     
     #llevame-button{
@@ -224,6 +207,7 @@
         font-weight: 900px;
         background-size: 25%;
         background-position: 5px;
+        grid-area: foto;   
     }
 }
 
@@ -254,6 +238,7 @@
         white-space: inherit;
         font-weight: 700;
         font-size: 100px;
+        margin: 0px;
     }
 
     .links-top{
