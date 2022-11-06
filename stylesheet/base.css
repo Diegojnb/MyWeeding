@@ -267,8 +267,7 @@ li {
 }
 
 #principal-rrss{
-    width: 100%;
-    top:var(--websiteHeaderHeight);
+    width: 100%;    
     position: absolute;
     display: grid;
     height: calc(100% - var(--websiteHeaderHeight));
@@ -300,13 +299,14 @@ li {
     text-align: center;
     font-size: 30px;
     height: 400px;
+    padding: 10%;
 }
 
 .rrss{
     padding: 5%;
     padding-left: 15%;
     align-items: center;
-    height: 750px;
+    height: 100%;
 }
 
 .foto-rrss{
