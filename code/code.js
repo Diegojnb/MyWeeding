@@ -56,14 +56,14 @@ function myNavFunc(){
 }
 
 function fixMain(){
-    fix("130px","80px","1500px","200px","15%","3%","700","80");
+    fix("130px","80px","1500px","200px","15%","3%","700","80","200px");
 }
 
 function fixSchedule(){
-    fix("90px","55px","1050px","110px","-13%","-1%","600","60");
+    fix("90px","55px","1050px","110px","-13%","5%","600","60","100px");
 }
 
-function fix(a,b,c,d,e,f,g,h){
+function fix(a,b,c,d,e,f,g,h,i){
     document.getElementById('navigation-letters').style.fontSize = a;
     var elements = document.getElementsByClassName('links-top');
     for (let index = 0; index < elements.length; index++) {
@@ -80,4 +80,5 @@ function fix(a,b,c,d,e,f,g,h){
     document.getElementById('core-button').style.marginTop = f;
     document.getElementById('core-button').style.fontWeight = g;
     document.getElementById('core-button').style.fontSize = h;
+    document.getElementById('core-button').style.height = i;
 }
