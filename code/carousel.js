@@ -30,7 +30,7 @@ function customSplice(index){
 } 
 
 
-async function changePhotos(){
+function changePhotos(){
     var index = generateRandomNumber();
     var el = listPhotos[index];        
     listPhotos = customSplice(index);
