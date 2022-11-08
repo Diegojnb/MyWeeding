@@ -60,7 +60,7 @@ function fixMain(){
 }
 
 function fixSchedule(){
-    fix("90px","55px","1050px","110px","-13%","0%","600","60");
+    fix("90px","55px","1050px","110px","-13%","-1%","600","60");
 }
 
 function fix(a,b,c,d,e,f,g,h){

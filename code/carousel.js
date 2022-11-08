@@ -1,7 +1,8 @@
-var numPhotos=78;
+var numPhotos=81;
 var listPhotos = [];
 var timeout = 10000;
 var margin = 200;
+var millisecondsToWait = 200;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -29,19 +30,16 @@ function customSplice(index){
 } 
 
 
-function changePhotos(){
+async function changePhotos(){
     var index = generateRandomNumber();
-    var el = listPhotos[index];
-        
+    var el = listPhotos[index];        
     listPhotos = customSplice(index);
     var srcPhoto = "./images/carrousel/" + el + ".jpg";
     var basehtml = "<img src=\"" + srcPhoto + "\">";
-    
     if(document.getElementById('carr0')==null){
         return;
     }
-    document.getElementById('carr0').innerHTML = basehtml;        
-
+    document.getElementById('carr0').innerHTML = basehtml;
     if(listPhotos.length==0){
         initializeList();
     }
@@ -51,8 +49,11 @@ jQuery(document).ready(function() {
 
 
     async function carousel() {
-        initializeList();
-        while (true) {             
+        initializeList();        
+        setTimeout(function() {
+            changePhotos();
+        }, millisecondsToWait); //sleep para que cargue la primera foto despues de cargar el main.html
+        while (true) {
             changePhotos();
             await sleep(timeout);
         }
