@@ -2,13 +2,26 @@ jQuery(document).ready(function() {
     $("#core-button").click(function(){
         if($(this).html()=="☰"){
             $(this).html('&#10005');
+            if(document.getElementById("myCarousel")==null){
+                fixNavigatorSize();
+            }
         }else{
-            $(this).html('&#9776');
+            $(this).html('&#9776');            
         }
     });
-
-    
 });
+
+function fixNavigatorSize(){
+    setTimeout(function() {
+        document.getElementById("exCollapsingNavbar").style.height = "1000px";
+    }, 400); //sleep para que cargue la primera foto despues de cargar el main.html
+    
+}
+
+function closeNavigator(){
+    document.getElementById("exCollapsingNavbar").classList.remove('in');
+    document.getElementById("core-button").innerHTML = '&#9776';
+}
 
 $(document).ready(function(){
     $("#principal").load("main.html");
@@ -28,18 +41,22 @@ $(document).ready(function(){
     $("#index-phone").click(function(){
         fixMain();
 		$("#principal").load("main.html");
+        closeNavigator();
 	});
 	$("#schedule-phone").click(function(){
         fixSchedule();
-		$("#principal").load("schedule.html");        
+		$("#principal").load("schedule.html");
+        closeNavigator();
 	});
     $("#location-phone").click(function(){
         fixSchedule();
-		$("#principal").load("location.html");        
+		$("#principal").load("location.html");
+        closeNavigator();
 	});
     $("#contact-phone").click(function(){
         fixSchedule();
-		$("#principal").load("contact.html");        
+		$("#principal").load("contact.html");
+        closeNavigator();
 	}); 
 });
 

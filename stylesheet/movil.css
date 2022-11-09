@@ -169,7 +169,9 @@
         padding-right:10px;
         background-position: 5px;
     }
-
+    #container-github{
+        padding-left: 220px;
+    }
     #rrss-footer{
         font-size: 50px;
         text-align: justify;
